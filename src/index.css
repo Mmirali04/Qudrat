@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #B39A78;
+  --color-primary-dark: #9A7F5C;
+  --color-dark: #FAF7F4;
+  --color-dark-2: #EFEBE6;
+  --color-dark-3: #E7E2DB;
+  --color-text: #1E1E1E;
+  --color-body: #55514D;
+  --color-ink: #1E1E1E;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --color-text-muted: #6F6A65;
+  --color-border: #E2D9CB;
+  --color-white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Raleway', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-variant-numeric: lining-nums;
+  background-color: var(--color-dark);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--color-ink);
+}
+
+h1, h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+p {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+#root {
+  width: 100%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: clamp(80px, 9vw, 140px) 0;
+}
+
+.section-title {
+  font-size: clamp(28px, 3.2vw, 50px);
+  font-weight: 300;
+  line-height: 1.08;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--color-body);
+  max-width: 600px;
+}
+
+/* Small uppercase label with a line before it */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 22px;
+}
+.eyebrow::before {
+  content: '';
+  width: 36px;
+  height: 1px;
+  background: currentColor;
+  opacity: .6;
+}
+
+.gold-text {
+  color: var(--color-primary);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 34px;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: background-color .3s, color .3s, border-color .3s, transform .3s var(--ease);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Solid dark pill */
+.btn-primary {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-dark);
+}
+.btn-primary:hover {
+  background: #3A3835;
+  border-color: #3A3835;
+}
+
+/* Outlined dark pill */
+.btn-outline {
+  background: transparent;
+  color: var(--color-ink);
+  border-color: rgba(30, 30, 30, .35);
+}
+.btn-outline:hover {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-dark);
+}
+
+/* White pill — for photos */
+.btn-light {
+  background: #fff;
+  border-color: #fff;
+  color: var(--color-ink);
+}
+.btn-light:hover {
+  background: transparent;
+  color: #fff;
+}
+
+/* Glass pill — for photos */
+.btn-glass {
+  background: rgba(255, 255, 255, .14);
+  border-color: rgba(255, 255, 255, .8);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+.btn-glass:hover {
+  background: #fff;
+  color: var(--color-ink);
+}
+
+.divider {
+  width: 48px;
+  height: 1px;
+  background: var(--color-primary);
+  margin: 4px 0 24px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-dark-2); }
+::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 3px; }
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 0; }
+  .container { padding: 0 16px; }
+}
