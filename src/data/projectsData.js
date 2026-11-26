@@ -83,6 +83,7 @@ export const FEATURED_PROJECTS = [
   },
   {
     slug: 'qudrat-coal-complex',
+    href: '/mining',
     name: 'QUDRAT COAL COMPLEX',
     image: '/projects/coal-complex.webp',
     category: 'mining',

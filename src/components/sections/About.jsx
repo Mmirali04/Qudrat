@@ -38,7 +38,7 @@ export default function About() {
           <div className={styles.content}>
             <p className={styles.sectionTag}>О компании</p>
             <h2 className="section-title">
-              Строим с заботой о <span className="gold-text">будущем</span>
+              Строим с заботой <span className="gold-text">о будущем</span>
             </h2>
             <div className="divider" />
             <p className={styles.text}>

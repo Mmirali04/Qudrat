@@ -114,6 +114,7 @@ function SectionHead({ badge, title, subtitle, center }) {
 }
 
 function Featured() {
+  const go = useSiteNav();
   const [cat, setCat] = useState('all');
   const list = cat === 'all' ? FEATURED_PROJECTS : FEATURED_PROJECTS.filter((p) => p.category === cat);
 
@@ -141,7 +142,10 @@ function Featured() {
             <ProjectCard
               key={p.slug}
               project={p}
-              onClick={() => scrollTo(p.slug === 'qudrat-city' ? 'catalog' : 'final-cta')}
+              onClick={() => {
+                if (p.href) go(p.href);
+                else scrollTo(p.slug === 'qudrat-city' ? 'catalog' : 'final-cta');
+              }}
             />
           ))}
         </div>

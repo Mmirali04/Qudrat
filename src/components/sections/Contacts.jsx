@@ -21,7 +21,7 @@ export default function Contacts() {
           <div className={styles.info}>
             <p className={styles.sectionTag}>Свяжитесь с нами</p>
             <h2 className="section-title">
-              Мы всегда<br />на <span className="gold-text">связи</span>
+              Мы всегда<br /><span className="gold-text">на связи</span>
             </h2>
             <div className="divider" />
             <p className={styles.infoText}>

@@ -40,7 +40,7 @@ export default function Projects() {
 
         <div className={styles.grid}>
           {filtered.map((project) => (
-            <ProjectCard key={project.slug} project={project} onClick={() => go('/projects')} />
+            <ProjectCard key={project.slug} project={project} onClick={() => go(project.href || '/projects')} />
           ))}
         </div>
 
