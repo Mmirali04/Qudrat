@@ -62,7 +62,7 @@
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 30px 60px -24px rgba(40, 30, 20, .35);
-  border-color: rgba(179, 154, 120, 0.3);
+  border-color: #B5B1AC;
 }
 
 .cardImg {
@@ -206,4 +206,9 @@
   height: 1px;
   background: currentColor;
   opacity: .6;
+}
+
+/* Smaller gap after the Stats strip */
+section.sectionTight {
+  padding-top: clamp(24px, 3vw, 48px);
 }

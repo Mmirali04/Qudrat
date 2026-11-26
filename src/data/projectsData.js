@@ -187,7 +187,8 @@ export const PROGRESS = {
 
 export const MASTER_PLAN = {
   badge: 'Мастер-план',
-  title: 'Генплан QUDRAT CITY',
+  title: 'Генплан',
+  titleAccent: 'QUDRAT CITY',
   subtitle:
     'Продуманное зонирование — жилые башни, коммерция, парки, образование и спорт в единой экосистеме',
   image: '/hero/hero-2.webp',
@@ -216,7 +217,8 @@ export const MASTER_PLAN = {
 
 export const INFRASTRUCTURE = {
   badge: 'Живая инфраструктура',
-  title: 'Коммерция и жизнь вместе',
+  title: 'Коммерция и',
+  titleAccent: 'жизнь вместе',
   subtitle:
     'Всё необходимое в пешей доступности — магазины, рестораны, офисы и сервисы прямо в комплексе',
   categories: [
@@ -279,7 +281,8 @@ export const METRICS = [
 
 export const ESG = {
   badge: 'Устойчивое развитие',
-  title: 'ESG-принципы в действии',
+  title: 'ESG-принципы',
+  titleAccent: 'в действии',
   desc: 'Мы внедряем ESG-принципы во все наши проекты, заботясь об экологии, социальной ответственности и будущих поколениях.',
   items: [
     'Экологическая ответственность',

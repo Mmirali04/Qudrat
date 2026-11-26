@@ -17,7 +17,7 @@
   --color-ink: #1E1E1E;
   --ease: cubic-bezier(.22, 1, .36, 1);
   --color-text-muted: #6F6A65;
-  --color-border: #E2D9CB;
+  --color-border: #DCDAD7;
   --color-white: #ffffff;
 }
 
@@ -98,7 +98,7 @@ input, textarea, select {
   font-weight: 300;
   line-height: 1.08;
   text-transform: uppercase;
-  color: var(--color-ink);
+  color: #9E9790;
   margin-bottom: 20px;
 }
 
@@ -130,6 +130,10 @@ input, textarea, select {
 
 .gold-text {
   color: var(--color-primary);
+}
+
+.section-title .gold-text {
+  color: var(--color-ink);
 }
 
 .btn {

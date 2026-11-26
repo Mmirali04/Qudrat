@@ -31,27 +31,10 @@
   overflow: hidden;
 }
 
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--color-primary);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
 .card:hover {
-  border-color: rgba(179, 154, 120, 0.2);
+  border-color: #B5B1AC;
   transform: translateY(-4px);
   box-shadow: 0 30px 60px -24px rgba(40, 30, 20, .35);
-}
-
-.card:hover::before {
-  transform: scaleX(1);
 }
 
 .iconWrap {

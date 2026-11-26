@@ -118,6 +118,10 @@
   margin-bottom: 24px;
 }
 
+.heroTitle :global(.gold-text) {
+  color: #fff;
+}
+
 .heroSub {
   font-size: 17px;
   color: rgba(255, 255, 255, 0.82);
@@ -577,7 +581,7 @@
 }
 
 .update {
-  border-left: 3px solid var(--color-primary);
+  border-left: 3px solid #B5B1AC;
   padding-left: 16px;
 }
 
@@ -727,7 +731,7 @@
 }
 
 .infraCard:hover {
-  border-color: var(--color-primary);
+  border-color: #B5B1AC;
   transform: translateY(-4px);
 }
 
@@ -805,7 +809,7 @@
 }
 
 .capItem {
-  border-top: 2px solid var(--color-primary);
+  border-top: 2px solid #B5B1AC;
   padding-top: 12px;
 }
 
@@ -874,9 +878,9 @@
 /* ---------- Metrics ---------- */
 
 .metrics {
-  background: var(--color-primary);
+  background: #fff;
   padding: 56px 0;
-  color: #fff;
+  color: var(--color-ink);
 }
 
 .metricsGrid {
@@ -895,7 +899,7 @@
 
 .metricsGrid span {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-text-muted);
 }
 
 /* ---------- ESG ---------- */
@@ -1119,14 +1123,18 @@
   .esg { grid-template-columns: 1fr; }
   .catalog { grid-template-columns: 1fr; }
   .filters { position: static; }
-  .kpis { grid-template-columns: repeat(3, 1fr); }
+  .kpis { grid-template-columns: repeat(6, 1fr); }
+  .kpi { grid-column: span 2; }
+  .kpi:nth-child(n + 4) { grid-column: span 3; }
   .flagship { max-width: 520px; }
 }
 
 @media (max-width: 640px) {
   .hero { padding-top: 110px; }
   .kpis { grid-template-columns: repeat(2, 1fr); }
-  .kpi:last-child { grid-column: span 2; }
+  .kpi,
+  .kpi:nth-child(n + 4) { grid-column: auto; }
+  .kpi:last-child { grid-column: 1 / -1; }
   .infraGrid,
   .pipeline,
   .capItems { grid-template-columns: 1fr; }

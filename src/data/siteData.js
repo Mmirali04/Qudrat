@@ -2,7 +2,7 @@ export const NAV_LINKS = [
   { label: 'Главная', href: '#home' },
   { label: 'Проекты', href: '/projects' },
   { label: 'Услуги', href: '#services' },
-  { label: 'Инвесторам', href: '#investors' },
+  { label: 'Горнодобыча', href: '/mining' },
   { label: 'О нас', href: '#about' },
   { label: 'Контакты', href: '#contacts' },
 ];

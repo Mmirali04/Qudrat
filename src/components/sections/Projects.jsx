@@ -13,7 +13,7 @@ export default function Projects() {
     : FEATURED_PROJECTS.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className={`section ${styles.sectionTight}`}>
       <div className="container">
         <div className={styles.header}>
           <div>

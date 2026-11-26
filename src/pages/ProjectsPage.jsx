@@ -333,10 +333,10 @@ function MasterPlan() {
   return (
     <section className={`section ${styles.alt}`}>
       <div className="container">
-        <SectionHead badge={m.badge} title={m.title} subtitle={m.subtitle} />
+        <SectionHead badge={m.badge} title={<>{m.title} <span className="gold-text">{m.titleAccent}</span></>} subtitle={m.subtitle} />
         <div className={styles.plan}>
           <div className={styles.planImg}>
-            <img src={m.image} alt={m.title} loading="lazy" />
+            <img src={m.image} alt={`${m.title} ${m.titleAccent}`} loading="lazy" />
             <div className={styles.legend}>
               <p>Легенда</p>
               <ul>
@@ -376,7 +376,7 @@ function Infrastructure() {
   return (
     <section className="section">
       <div className="container">
-        <SectionHead badge={inf.badge} title={inf.title} subtitle={inf.subtitle} />
+        <SectionHead badge={inf.badge} title={<>{inf.title} <span className="gold-text">{inf.titleAccent}</span></>} subtitle={inf.subtitle} />
         <div className={styles.infraGrid}>
           {inf.categories.map((c) => (
             <div key={c.label} className={styles.infraCard}>
@@ -409,7 +409,7 @@ function Capabilities() {
   return (
     <section className={`section ${styles.alt}`}>
       <div className="container">
-        <SectionHead badge="Наши возможности" title={<>Полный цикл <span className="gold-text">работ</span></>} />
+        <SectionHead badge="Наши возможности" title={<>Полный <span className="gold-text">цикл работ</span></>} />
         <div className={styles.capGrid}>
           {CAPABILITIES.map((c) => (
             <div key={c.title} className={styles.capCol}>
@@ -436,7 +436,7 @@ function Pipeline() {
   return (
     <section className="section">
       <div className="container">
-        <SectionHead badge="Этапы реализации" title={<>Как мы создаём <span className="gold-text">проекты</span></>} center />
+        <SectionHead badge="Этапы реализации" title={<>Как мы <span className="gold-text">создаём проекты</span></>} center />
         <ol className={styles.pipeline}>
           {PIPELINE.map((s) => (
             <li key={s.n} className={styles.step}>
@@ -475,7 +475,7 @@ function Esg() {
     <section className="section">
       <div className={`container ${styles.esg}`}>
         <div>
-          <SectionHead badge={ESG.badge} title={ESG.title} subtitle={ESG.desc} />
+          <SectionHead badge={ESG.badge} title={<>{ESG.title} <span className="gold-text">{ESG.titleAccent}</span></>} subtitle={ESG.desc} />
         </div>
         <ul className={styles.esgList}>
           {ESG.items.map((i) => (
